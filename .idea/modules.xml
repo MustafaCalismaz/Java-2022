@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/git/java2022/Deneme/Deneme.iml" filepath="$USER_HOME$/git/java2022/Deneme/Deneme.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson assingments/1/.idea/java2022.iml" filepath="$PROJECT_DIR$/lesson assingments/1/.idea/java2022.iml" />
+      <module fileurl="file://$USER_HOME$/git/java2022/ogrenciTakip/ogrenciTakip.iml" filepath="$USER_HOME$/git/java2022/ogrenciTakip/ogrenciTakip.iml" />
+      <module fileurl="file://$USER_HOME$/git/java2022/oop1/oop1.iml" filepath="$USER_HOME$/git/java2022/oop1/oop1.iml" />
+    </modules>
+  </component>
+</project>
