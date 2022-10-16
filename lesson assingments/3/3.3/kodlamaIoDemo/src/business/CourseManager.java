@@ -19,11 +19,11 @@ public class CourseManager {
     }
 
     public void add(Course course) throws Exception{
-        boolean again = false;
+        boolean again = true;
 
         for (Course c: courseDao.getCourses()) {
             if (courseDao.equals(course.getName())) {
-                again = true;
+                again = false;
             }
         }
         if (!again){

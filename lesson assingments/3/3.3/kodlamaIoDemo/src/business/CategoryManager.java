@@ -16,34 +16,34 @@ public class CategoryManager {
         this.loggers = loggers;
     }
 
-    public void add(Category category) throws Exception{
-        boolean again = false;
+    public void add(Category category) throws Exception {
+        boolean again = true;
 
-        for (Category c: categoryDao.getCategories()) {
+        for (Category c : categoryDao.getCategories()) {
             if (category.equals(category.getName())) {
-                again = true;
+                again = false;
             }
         }
-        if (!again){
+        if (!again) {
             categoryDao.add(category);
-        }else {
+        } else {
             throw new Exception("Kategori ismi ayni olamaz");
         }
-        for (ILogger logger:loggers
-             ) {
+        for (ILogger logger : loggers
+        ) {
             logger.log(category.getName());
         }
     }
 
-    public void delete(int id){
+    public void delete(int id) {
         categoryDao.delete(id);
     }
 
-    public void update(int id, Category category){
-        categoryDao.update(id,category);
+    public void update(int id, Category category) {
+        categoryDao.update(id, category);
     }
 
-    public Category findById(int id){
+    public Category findById(int id) {
         return categoryDao.findById(id);
     }
 
