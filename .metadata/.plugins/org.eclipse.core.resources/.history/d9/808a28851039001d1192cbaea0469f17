@@ -1,0 +1,47 @@
+package ogrenciTakip;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		System.out.println("Merhaba Lütfen İsminizi Giriniz.");
+		Scanner sc = new Scanner(System.in);
+		String ogr = sc.next();
+		System.out.println("Merhaba Öğretmen " + ogr);
+		System.out.println("Kaç adet öğrenci gireceksiniz (Lütfen sayı giriniz.) ?");
+		int ogrsayi = sc.nextInt();
+
+		int[] ogrsayitutan = new int[ogrsayi];
+		ogrsayitutan.toString();
+		String[] ogrenci = new String[ogrsayi];
+		for (int i = 0; i < ogrsayi; i++) {
+			System.out.println(" " + (i + 1) + ". Ögrencinin  giriniz: ");
+			ogrenci[i] = sc.next();
+
+		}
+
+		System.out.println("Ders notunu girmek istediğiniz Öğrencinin sıra numarasını yazınız.");
+		int ogrnum = sc.nextInt();
+		
+		String[] ogrders = new String[3];
+		String ders1 = "";
+		Object[][] ogrencidersleri = new Object[ogrnum][ogrders.length];
+		
+		for (int i = 0; i < ogrencidersleri.length; i++) {
+			for (int j = 0; j < ogrencidersleri.length; j++) {
+				
+			}
+			
+		}
+		
+//		for (int i = 0; i <= ogrnum; i++) {
+//			for (int j = 0; j <= ogrders.length; j++) {
+//
+//			}
+//
+//		}
+	}
+
+}

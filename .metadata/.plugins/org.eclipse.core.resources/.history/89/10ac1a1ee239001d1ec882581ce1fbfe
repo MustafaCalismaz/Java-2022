@@ -1,0 +1,36 @@
+package oop1;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// Bir nesneyi nesne yapan onun tek bir değişkeni değil tüm özellikleridir.
+		// String mesaj = "Vade oranı";
+
+		Product product1 = new Product();
+		product1.name = "Delonghi Kahve Makinesi";
+		product1.unitPrice = 7500;
+		product1.discount = 7;
+		product1.unitİnStock = 3;
+		product1.imageUrl = "bilmemNe1.jpg";
+
+		// get
+		// System.out.println(product1.name);
+
+		Product product2 = new Product();
+		product2.name = "Smeg Kahve Makinesi";
+		product2.unitPrice = 6500;
+		product2.discount = 7;
+		product2.unitİnStock = 3;
+		product2.imageUrl = "bilmemNe2.jpg";
+
+		Product product3 = new Product();
+		product3.name = "Kitchen Kahve Makinesi";
+		product3.unitPrice = 4500;
+		product3.discount = 7;
+		product3.unitİnStock = 3;
+		product3.imageUrl = "bilmemNe3.jpg";
+		
+		
+	}
+
+}

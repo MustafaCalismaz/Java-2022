@@ -1,0 +1,6 @@
+package oop1;
+
+public class CorporatCustomer extends Customer {
+	private String companyName;
+	private String taxNumber;
+}

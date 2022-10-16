@@ -1,0 +1,11 @@
+package oop1;
+
+//Classlar PascalCase olarak kelimelerin ilk harfi ve sonra ki kelimelerin ilk harfi büyük olacak şekilde yazılır.
+public class Product {
+	String name;
+	double unitPrice;
+	double discount;
+	String[] imageUrls;
+	int unitİnStock;
+	
+}

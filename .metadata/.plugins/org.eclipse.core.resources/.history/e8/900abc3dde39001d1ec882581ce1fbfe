@@ -1,0 +1,12 @@
+package oop1;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// Bir nesneyi nesne yapan onun tek bir değişkeni değil tüm özellikleridir.
+		String mesaj = "";
+
+	}
+
+}

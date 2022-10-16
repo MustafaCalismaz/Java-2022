@@ -1,0 +1,19 @@
+package oop1;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// Bir nesneyi nesne yapan onun tek bir değişkeni değil tüm özellikleridir.
+		//String mesaj = "Vade oranı";
+		
+		Product product1 = new Product();
+		product1.name="Delonghi Kahve Makinesi";
+		product1.unitPrice=7500;
+		product1.discount=7;
+		product1.unitİnStock=3;
+		product1.imageUrl="bilmem.jpg";
+		
+		
+	}
+
+}
