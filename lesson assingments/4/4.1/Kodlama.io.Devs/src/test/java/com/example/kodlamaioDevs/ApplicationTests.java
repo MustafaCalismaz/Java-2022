@@ -1,4 +1,4 @@
-package com.example.kodlama_io_devs;
+package com.example.kodlamaioDevs;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

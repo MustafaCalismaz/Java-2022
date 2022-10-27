@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
-@Repository
+@Repositoryla
 public class InMemoryBrandRepository implements BrandRepository {
     List<Brand> brands;
 
