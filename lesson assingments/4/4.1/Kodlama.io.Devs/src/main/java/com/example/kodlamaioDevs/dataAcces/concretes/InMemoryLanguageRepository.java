@@ -3,7 +3,6 @@ package com.example.kodlamaioDevs.dataAcces.concretes;
 import com.example.kodlamaioDevs.dataAcces.abstracts.ILanguageRepository;
 import com.example.kodlamaioDevs.entities.concretes.Languages;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;

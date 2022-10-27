@@ -1,7 +1,6 @@
 package com.example.kodlamaioDevs.wepApi;
 
 import com.example.kodlamaioDevs.business.abstracts.ILanguageService;
-import com.example.kodlamaioDevs.dataAcces.abstracts.ILanguageRepository;
 import com.example.kodlamaioDevs.entities.concretes.Languages;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,7 +34,7 @@ public class LanguagesController {
     }
 
     @GetMapping("findbyid")
-    public void findById(int id) {
+    public void findById(@RequestParam int id) {
         iLanguageService.findById(id);
     }
 
