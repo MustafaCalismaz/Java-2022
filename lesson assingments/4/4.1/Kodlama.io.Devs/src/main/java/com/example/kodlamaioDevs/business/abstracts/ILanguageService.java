@@ -2,6 +2,7 @@ package com.example.kodlamaioDevs.business.abstracts;
 
 import com.example.kodlamaioDevs.entities.concretes.Languages;
 
+
 import java.util.List;
 
 public interface ILanguageService {

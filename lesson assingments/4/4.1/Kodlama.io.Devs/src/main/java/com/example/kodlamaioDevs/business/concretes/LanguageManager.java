@@ -3,13 +3,16 @@ package com.example.kodlamaioDevs.business.concretes;
 import com.example.kodlamaioDevs.business.abstracts.ILanguageService;
 import com.example.kodlamaioDevs.dataAcces.abstracts.ILanguageRepository;
 import com.example.kodlamaioDevs.entities.concretes.Languages;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 
 import java.util.List;
-
+@Service
 public class LanguageManager implements ILanguageService{
 
     private ILanguageRepository iLanguageRepository;
-
+    @Autowired
     public LanguageManager(ILanguageRepository iLanguageRepository) {
         this.iLanguageRepository = iLanguageRepository;
     }
