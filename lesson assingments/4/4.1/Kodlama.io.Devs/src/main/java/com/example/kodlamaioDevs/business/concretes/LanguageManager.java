@@ -4,6 +4,7 @@ import com.example.kodlamaioDevs.business.abstracts.ILanguageService;
 import com.example.kodlamaioDevs.dataAcces.abstracts.ILanguageRepository;
 import com.example.kodlamaioDevs.entities.concretes.Languages;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 
