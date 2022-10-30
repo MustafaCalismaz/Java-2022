@@ -6,17 +6,18 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Repository
 public class InMemoryLanguageRepository implements ILanguageRepository {
-
-    List<Languages> language;
+    private ILanguageRepository iLanguageRepository;
+    private List<Languages> language;
 
     public InMemoryLanguageRepository() {
         language = new ArrayList<Languages>();
-        language.add(new Languages(1,"C#"));
-        language.add(new Languages(2,".net"));
-        language.add(new Languages(3,"phyton"));
-        language.add(new Languages(4,"java"));
+        language.add(new Languages(1, "C#"));
+        language.add(new Languages(2, ".net"));
+        language.add(new Languages(3, "phyton"));
+        language.add(new Languages(4, "java"));
     }
 
     @Override
@@ -31,21 +32,12 @@ public class InMemoryLanguageRepository implements ILanguageRepository {
 
     @Override
     public void update(Languages languages) {
-        for (Languages l : language) {
-            if(l.getId()==languages.getId()){
-                l.setName(languages.getName());
-            }
-        }
+        iLanguageRepository.update(languages);
     }
 
     @Override
-    public Languages findById(int id) throws Exception {
-        for (Languages i:language) {
-            if (i.getId()==id){
-                return i;
-            }
-        }
-       return null;
+    public Languages findById(int id){
+        return language.get(id);
     }
 
     @Override

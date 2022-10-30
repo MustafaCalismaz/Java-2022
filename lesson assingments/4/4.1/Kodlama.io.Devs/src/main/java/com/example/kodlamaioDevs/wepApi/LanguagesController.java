@@ -11,17 +11,19 @@ import java.util.List;
 @RequestMapping("/api/languages")
 public class LanguagesController {
     private ILanguageService iLanguageService;
+
     @Autowired
     public LanguagesController(ILanguageService iLanguageService) {
         this.iLanguageService = iLanguageService;
     }
-    @PostMapping("/id")
+
+    @PostMapping("/add")
     public void add(@RequestBody Languages languages) throws Exception {
         iLanguageService.add(languages);
     }
 
-    @DeleteMapping("{id}")
-    public void delete(@PathVariable("id") int id) {
+    @DeleteMapping("/delete")
+    public void delete(int id) {
         iLanguageService.delete(id);
     }
 
@@ -30,13 +32,13 @@ public class LanguagesController {
         iLanguageService.update(languages);
     }
 
-    @GetMapping("{id}")
-    public void findById(@PathVariable("id") int id) {
+    @GetMapping("/findbyid")
+    public void findById(int id) {
         iLanguageService.findById(id);
     }
 
     @GetMapping("/getall")
-    public List<Languages> getAll(){
+    public List<Languages> getAll() {
         return iLanguageService.getAll();
     }
 }

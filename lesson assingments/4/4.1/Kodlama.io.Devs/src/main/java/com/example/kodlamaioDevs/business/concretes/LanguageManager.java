@@ -4,7 +4,6 @@ import com.example.kodlamaioDevs.business.abstracts.ILanguageService;
 import com.example.kodlamaioDevs.dataAcces.abstracts.ILanguageRepository;
 import com.example.kodlamaioDevs.entities.concretes.Languages;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 
@@ -12,15 +11,18 @@ import java.util.List;
 @Service
 public class LanguageManager implements ILanguageService{
 
+    private List<Languages> language;
     private ILanguageRepository iLanguageRepository;
     @Autowired
-    public LanguageManager(ILanguageRepository iLanguageRepository) {
+    public LanguageManager(ILanguageRepository iLanguageRepository, List<Languages> language) {
+        this.language = language;
         this.iLanguageRepository = iLanguageRepository;
     }
 
     @Override
     public void add(Languages languages) throws Exception {
-        if (languages!=null){
+
+        if (languages.getName().isBlank()== false){
             for (Languages l : iLanguageRepository.getAll()) {
                 if (l.getName().equals(languages.getName())){
                     throw new Exception("isim ayni olamaz");
@@ -39,12 +41,21 @@ public class LanguageManager implements ILanguageService{
 
     @Override
     public void update(Languages languages) {
-        iLanguageRepository.update(languages);
+        for (Languages l : language) {
+            if(l.getId()==languages.getId()){
+                l.setName(languages.getName());
+            }
+        }
     }
 
     @Override
     public Languages findById(int id) {
-        return findById(id);
+        for (Languages i:language) {
+            if (i.getId()==id){
+                return i;
+            }
+        }
+        return null;
     }
 
     @Override

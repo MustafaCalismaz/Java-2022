@@ -12,7 +12,7 @@ public interface ILanguageRepository {
 
     void update(Languages languages);
 
-    Languages findById(int id) throws Exception;
+    Languages findById(int id);
 
     List<Languages> getAll();
 
