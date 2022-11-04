@@ -1,4 +1,4 @@
-package kodlama.io.rentACar.entities.concretes;
+package com.example.kodlamaioDevs.entities.concretes;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,20 +7,21 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-@Table(name = "brands")
+@Table(name = "programingLanguages")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Brand {
+public class ProgramingLanguage {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)//
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
-    @Column(name="name")
+    @Column(name = "name")
     private String name;
-}
 
-//NationalId-->natId veri tabaninda ki kolon isimleri burdaki isimlaeriyle farklilik gostermemelidir
+
+}
