@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class GetAllProgramingLanguagesResponse {
+public class GetByIdProgrammingLanguageResponse {
     private int id;
     private String name;
 }
