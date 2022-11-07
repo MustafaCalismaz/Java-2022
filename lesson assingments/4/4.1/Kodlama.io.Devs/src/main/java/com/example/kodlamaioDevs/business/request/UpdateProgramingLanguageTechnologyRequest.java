@@ -11,5 +11,5 @@ import lombok.NoArgsConstructor;
 public class UpdateProgramingLanguageTechnologyRequest {
     private int id;
     private String name;
-
+    private ProgrammingLanguage belong;
 }

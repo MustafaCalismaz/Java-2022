@@ -37,6 +37,7 @@ public class ProgrammingLanguageTecnologyManager implements IProgrammingLanguage
     @Override
     public void update(UpdateProgramingLanguageTechnologyRequest updateProgramingLanguageTechnology) {
         ProgrammingLanguageTechnology programmingLanguageTechnology = iProgrammingLanguageTechnologyRepository.getReferenceById(updateProgramingLanguageTechnology.getId());
+        programmingLanguageTechnology.setProgramingLanguage(updateProgramingLanguageTechnology.getBelong());
         programmingLanguageTechnology.setName(updateProgramingLanguageTechnology.getName());
         iProgrammingLanguageTechnologyRepository.save(programmingLanguageTechnology);
     }
