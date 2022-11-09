@@ -14,25 +14,28 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Service
 public class ProgrammingLanguageManager implements IProgrammingLanguageService {
 
     private final IProgrammingLanguageRepository iProgramingLanguageRepository;
+
     @Autowired
     public ProgrammingLanguageManager(IProgrammingLanguageRepository iProgramingLanguageRepository) {
         this.iProgramingLanguageRepository = iProgramingLanguageRepository;
     }
+
     @Override
     public void add(CreateProgrammingLanguageRequest createProgramingLanguageRequest) throws Exception {
-            ProgrammingLanguage programingLanguage = new ProgrammingLanguage();
-        if (!createProgramingLanguageRequest.getName().isBlank()){
+        ProgrammingLanguage programingLanguage = new ProgrammingLanguage();
+        if (!createProgramingLanguageRequest.getName().isBlank()) {
             for (ProgrammingLanguage l : iProgramingLanguageRepository.findAll()) {
-                if (l.getName().equals(createProgramingLanguageRequest.getName())){
+                if (l.getName().equals(createProgramingLanguageRequest.getName())) {
                     throw new Exception("isim ayni olamaz");
                 }
             }
         }
-        if (createProgramingLanguageRequest.getName().isEmpty()){
+        if (createProgramingLanguageRequest.getName().isEmpty()) {
             throw new Exception("Programlama dili bos gecilemez");
 
         }
@@ -47,7 +50,7 @@ public class ProgrammingLanguageManager implements IProgrammingLanguageService {
     }
 
     @Override
-    public void update(UpdateProgrammingLanguageRequest updateProgramingLanguageRequest){
+    public void update(UpdateProgrammingLanguageRequest updateProgramingLanguageRequest) {
         ProgrammingLanguage programingLanguage = iProgramingLanguageRepository.getReferenceById(updateProgramingLanguageRequest.getId());
         programingLanguage.setName(updateProgramingLanguageRequest.getName());
         iProgramingLanguageRepository.save(programingLanguage);
@@ -58,14 +61,14 @@ public class ProgrammingLanguageManager implements IProgrammingLanguageService {
         List<ProgrammingLanguage> languages = iProgramingLanguageRepository.findAll();
         GetByIdProgrammingLanguageResponse getByIdProgramingLanguageResponse = null;
 
-        for (ProgrammingLanguage programingLanguageTemp:languages) {
-            if (programingLanguageTemp.getId()==id){
+        for (ProgrammingLanguage programingLanguageTemp : languages) {
+            if (programingLanguageTemp.getId() == id) {
                 getByIdProgramingLanguageResponse = new GetByIdProgrammingLanguageResponse();
                 getByIdProgramingLanguageResponse.setId(programingLanguageTemp.getId());
                 getByIdProgramingLanguageResponse.setName(programingLanguageTemp.getName());
             }
         }
-        if (getByIdProgramingLanguageResponse == null){
+        if (getByIdProgramingLanguageResponse == null) {
             throw new Exception("Girilen id numarasina ait programlama dili bulunamadi");
         }
         return getByIdProgramingLanguageResponse;
@@ -75,7 +78,7 @@ public class ProgrammingLanguageManager implements IProgrammingLanguageService {
     public List<GetAllProgrammingLanguagesResponse> getAll() {
         List<ProgrammingLanguage> programingLanguages = iProgramingLanguageRepository.findAll();
         List<GetAllProgrammingLanguagesResponse> getAllProgrammingLanguagesRespons = new ArrayList<GetAllProgrammingLanguagesResponse>();
-        for (ProgrammingLanguage programingLanguage:programingLanguages) {
+        for (ProgrammingLanguage programingLanguage : programingLanguages) {
             GetAllProgrammingLanguagesResponse responseItem = new GetAllProgrammingLanguagesResponse();
             responseItem.setId(programingLanguage.getId());
             responseItem.setName(programingLanguage.getName());

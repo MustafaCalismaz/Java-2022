@@ -1,6 +1,5 @@
 package com.example.kodlamaioDevs.business.request;
 
-import com.example.kodlamaioDevs.entities.concretes.ProgrammingLanguage;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,8 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UpdateProgramingLanguageTechnologyRequest {
-    private int id;
+public class CreateProgrammingLanguageTechnologyRequest {
     private String name;
     private int programmingLanguageId;
 }

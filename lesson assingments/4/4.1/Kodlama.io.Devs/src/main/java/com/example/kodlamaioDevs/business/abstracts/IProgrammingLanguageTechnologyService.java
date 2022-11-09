@@ -7,7 +7,7 @@ import com.example.kodlamaioDevs.business.responses.GetByIdProgrammingLanguageTe
 import java.util.List;
 
 public interface IProgrammingLanguageTechnologyService {
-    void add(CreateProgramingLanguageTechnologyRequest createProgramingLanguageTechnologyRequest) throws Exception;
+    void add(CreateProgrammingLanguageTechnologyRequest createProgrammingLanguageTechnologyRequest) throws Exception;
 
     void delete(DeleteProgramingLanguageTechnologyRequest deleteProgramingLanguageTechnologyRequest);
 

@@ -1,13 +1,8 @@
 package com.example.kodlamaioDevs.entities.concretes;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
+import lombok.*;
 import javax.persistence.*;
 
-@Table(name = "programingLanguagesTechonology")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -23,6 +18,6 @@ public class ProgrammingLanguageTechnology {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "id_programin_language", referencedColumnName = "id")
-    private ProgrammingLanguage programingLanguage;
+    @JoinColumn(name = "id_programming_languages",referencedColumnName = "id")
+    private ProgrammingLanguage belong;
 }

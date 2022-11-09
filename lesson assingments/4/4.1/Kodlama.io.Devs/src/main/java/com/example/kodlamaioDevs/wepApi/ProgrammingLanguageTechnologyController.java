@@ -1,12 +1,12 @@
 package com.example.kodlamaioDevs.wepApi;
 
 import com.example.kodlamaioDevs.business.abstracts.IProgrammingLanguageTechnologyService;
-import com.example.kodlamaioDevs.business.request.CreateProgramingLanguageTechnologyRequest;
+import com.example.kodlamaioDevs.business.request.CreateProgrammingLanguageRequest;
+import com.example.kodlamaioDevs.business.request.CreateProgrammingLanguageTechnologyRequest;
 import com.example.kodlamaioDevs.business.request.DeleteProgramingLanguageTechnologyRequest;
 import com.example.kodlamaioDevs.business.request.UpdateProgramingLanguageTechnologyRequest;
 import com.example.kodlamaioDevs.business.responses.GetAllProgrammingLanguageTechnologyResponse;
 import com.example.kodlamaioDevs.business.responses.GetByIdProgrammingLanguageTechnologyResponse;
-import com.example.kodlamaioDevs.entities.concretes.ProgrammingLanguage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,8 +23,8 @@ public class ProgrammingLanguageTechnologyController {
     }
 
     @PostMapping("/add")
-    public void add(CreateProgramingLanguageTechnologyRequest createProgramingLanguageTechnologyRequest) throws Exception {
-        iProgrammingLanguageTechnologyService.add(createProgramingLanguageTechnologyRequest);
+    public void add(CreateProgrammingLanguageTechnologyRequest createProgrammingLanguageTechnologyRequest) throws Exception {
+        iProgrammingLanguageTechnologyService.add(createProgrammingLanguageTechnologyRequest);
     }
 
     @DeleteMapping("/delete{id}")
